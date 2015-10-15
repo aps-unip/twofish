@@ -13,6 +13,6 @@ executem primeiro o run.rb e depois o encrypt.rb
 - coloque a key no campo key 
 - coloque a string criptografada no espaco 
 
-Altere o algoritmo para Twofish e o Mode para CBC
+Altere o algoritmo para Twofish e o Mode para ebc
 
 Marque o `Decode the input using Base64`
