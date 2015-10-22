@@ -37,7 +37,7 @@ Como já dito pelo Capitão, para entrar no navio deverá possuir roupa especial
 
 
 def slow
-  yield.each_char { |c| print c; $stdout.flush; sleep 0.20}
+  yield.each_char { |c| print c; $stdout.flush; sleep 0.10}
 end
 
 puts navio
