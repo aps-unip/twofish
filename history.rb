@@ -35,15 +35,12 @@ ob vindo direto da Coreia do Norte onde apresenta indicios de possuir carregamen
 Como já dito pelo Capitão, para entrar no navio deverá possuir roupa especial,entre outros equipamentos para controlar o acesso nada melhor que chamar a Unidade de Segurança Tecnológica, essa equipe realiza a segurança de locais juntamente com a policia por meio de criptografias onde só pessoas que possuem o acesso poderá descriptografar a informação necessária para adentrar ao navio, sendo assim evitando pessoal mal intencionadas."
 
 
-puts navio
-
 
 def slow
   yield.each_char { |c| print c; $stdout.flush; sleep 0.20}
 end
 
-
-
+puts navio
 
 slow do
   text
