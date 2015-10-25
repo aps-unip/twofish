@@ -1,5 +1,6 @@
-# encoding: UTF-8
-class History
+# require 'pry'
+
+class Teste
   def initialize
     @texto
     @historia
@@ -49,4 +50,26 @@ comunicação que criptografe os relatórios e assim possam ser enviados em segu
 até o Capitão Nascimento e sua equipe. Você pode até pensar que o uso de criptografia 
 é exagero, mas não é, afinal, você não tem conhecimento sobre o que os norte coreanos são capazes?"
   end
+
+  def slow
+  yield.each_char { |c| print c; $stdout.flush; sleep 0.10}
+  end
+
+  # slow do
+  #   @historia
+  # end
 end
+
+
+teste = Teste.new
+
+ puts teste.navio
+ def slow
+  yield.each_char { |c| print c; $stdout.flush; sleep 0.10}
+  end
+
+  slow do
+    teste.historia
+  end
+
+# binding(pry)
