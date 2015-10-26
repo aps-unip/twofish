@@ -1,13 +1,11 @@
 # encoding: UTF-8
 require 'twofish'
 require 'base64'
-require 'pry'
 
 require_relative 'generate_key'
 require_relative 'generate_text'
 
 class Encrypt
-# attr_accessor :tf, :texto_cripto, :descriptografado
   def initialize
     @file
     @key
@@ -17,6 +15,7 @@ class Encrypt
     @texto_cripto
     @base
     @descriptografado
+    @hexa
   end
 
   def abre_key
@@ -33,11 +32,13 @@ class Encrypt
     @texto = @file2.read
     @texto_cripto = @tf.encrypt(@texto)
     @base = Base64.encode64(@texto_cripto)
+    @hexa = @texto.hex
   end
 
   def mostra_criptografia
     puts "Mostrando a criptografia"
     puts @base
+    puts @hexa
   end
 
   def salvar_criptografia

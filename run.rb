@@ -7,17 +7,21 @@ require_relative 'encrypt'
 historia = History.new
 encripto = Encrypt.new
 
+puts "Voce quer ver a introdução (y) para sim e (n) para pular a introdução"
+opcao = gets.chomp
 puts historia.navio
 
-def slow
-  yield.each_char { |c| print c; $stdout.flush; sleep 0.10}
-end
+if opcao == "y"
+  def slow
+    yield.each_char { |c| print c; $stdout.flush; sleep 0.10}
+  end
 
-slow do
-  historia.historia
-end
+  slow do
+    historia.historia
+  end
 
-puts "\n \n \n \n \n \n \n \n \n \n"
+  else opcao == "n"  
+    puts "\n \n \n \n \n \n \n \n \n \n"
 
 
 puts "Bem vindo, entre com seu nome de usuário"
@@ -31,23 +35,24 @@ puts "1 - Criptografar a informação"
 puts "2 - Sair do programa"
 menu = gets.chomp
 
-case menu
-  when "1" 
-    texto = GenerateText.new(texto)
-    texto.gerar_texto
-    texto.salvar_texto
-    
-    chave = GenerateKey.new
-    chave.create_key
-    chave.mostra_chave
-    chave.save_key
-    
-    encripto.abre_key
-    encripto.criptografa
-    encripto.gera_criptografia
-    encripto.mostra_criptografia
-    encripto.salvar_criptografia
-    texto.remove_file
-  when "2"
-    puts "Saindo do programa"
+  case menu
+    when "1" 
+      texto = GenerateText.new(texto)
+      texto.gerar_texto
+      texto.salvar_texto
+      
+      chave = GenerateKey.new
+      chave.create_key
+      chave.mostra_chave
+      chave.save_key
+      
+      encripto.abre_key
+      encripto.criptografa
+      encripto.gera_criptografia
+      encripto.mostra_criptografia
+      encripto.salvar_criptografia
+      texto.remove_file
+    when "2"
+      puts "Saindo do programa"
+  end
 end
