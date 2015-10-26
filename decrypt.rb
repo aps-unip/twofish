@@ -6,7 +6,7 @@ require_relative 'generate_key'
 require_relative 'generate_text'
 
 
-puts "Voce deseja colocar a key e a criptografia manualmente (y) e (n) para usar os arquivos gerados (key) e (hex_criptografia)"
+puts "Voce deseja colocar a key e a criptografia manualmente (y) e (n) para usar os arquivos gerados (key) e (criptografia)"
 opcao = gets.chomp
 
 if opcao == "y"
