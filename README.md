@@ -20,5 +20,6 @@ Altere o algoritmo para Twofish e o Mode para ecb
 
 Marque o `Decode the input using Base64`
 
+## Ferramenta online para criptografar [tiiks4noobs.com](https://www.tools4noobs.com/online_tools/encrypt/)
 Para criptografar usando o site é preciso criar uma key com mais de 16 caracteres, com menos não ira funcionar por questões de seguraça.
 e sempre utilizar o mode `ecb` e o decode `Base64`
